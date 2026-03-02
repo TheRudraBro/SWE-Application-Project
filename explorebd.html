@@ -7,7 +7,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>About Us</title>
 </head>
-<body>
+<body class="bg-gray-100">
     <!-- Navbar -->
 <nav class="bg-white shadow-md">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -63,47 +63,168 @@
     </ul>
   </div>
 </nav>
-<header>
-  <div class="bg-[url('./Images/bg.png')] bg-cover bg-center h-64 flex items-center justify-center">
-    <h1 class="text-3xl md:text-5xl font-extrabold text-white text-center">
-      Explore the Beauty of Bangladesh
-    </h1>
+<header class="max-w-7xl mx-auto px-6 py-16">
+
+  <!-- GRID -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/bandarban.png" alt="Bandarban" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Bandarban</h2>
+        <p class="text-sm">Beautiful hills and waterfalls experience.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/sajek.png" alt="Sajek" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Sajek Valley</h2>
+        <p class="text-sm">Amazing cloud and sunrise view.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/rangamati.png" alt="Rangamati" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Rangamati</h2>
+        <p class="text-sm">Kaptai Lake and natural beauty.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/sylhet.png" alt="Sylhet" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Sylhet</h2>
+        <p class="text-sm">Beautiful tea gardens and natural landscapes.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/coxbazar.jpg" alt="Cox's Bazar" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Cox's Bazar</h2>
+        <p class="text-sm">World's longest natural sea beach.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/saintmartin.png" alt="Saint Martin" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Saint Martin</h2>
+        <p class="text-sm">Beautiful island with pristine beaches.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/sunamganj.png" alt="Sunamganj" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Sunamganj</h2>
+        <p class="text-sm">Rich cultural heritage and scenic beauty.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARD -->
+    <div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+      <figure>
+        <img class="h-48 w-full object-cover rounded-xl" src="Images/sundarban.png" alt="Sundarban" />
+      </figure>
+      <div class="card-body p-5">
+        <h2 class="card-title text-lg">Sundarban</h2>
+        <p class="text-sm">Mangrove forest and home to the Royal Bengal Tiger.</p>
+
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm" onclick="modal1.showModal()">Open</button>
+
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+
   </div>
+
 </header>
-<main>
-      <!-- Tours with details modal and book now button -->
-       <section>
-        <div class="max-w-7xl mx-auto px-6 py-12">
-          <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
-            Explore Bangladesh and Beyond
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Tour Card 1 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="Assets/Sundarbans.jpg" alt="Sundarbans" class="w-full h-48 object-cover">
-              <div class="p-4">
-                <h3 class="text-xl font-semibold text-gray-800">Sundarbans</h3>
-                <p class="text-gray-600 mt-2">Experience the largest mangrove forest in the world, home to the elusive Bengal tiger.</p>
-                <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition" onclick="openModal('Sundarbans')">View Details</button>
-              </div>
-            </div>
-            <!-- Tour Card 2 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="Assets/SaintMartin.jpg" alt="Saint Martin's Island" class="w-full h-48 object-cover">
-              <div class="p-4">
-                <h3 class="text-xl font-semibold text-gray-800">Saint Martin's Island</h3>
-                <p class="text-gray-600 mt-2">Discover the serene beauty of Bangladesh's only coral island, perfect for beach lovers.</p>
-                <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition" onclick="openModal('Saint Martin')">View Details</button>
-              </div>
-            </div>
-            <!-- Tour Card 3 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="Assets/Chittagong.jpg" alt="Chittagong Hill Tracts" class="w-full h-48 object-cover">
-              <div class="p-4">
-                <h3 class="text-xl font-semibold text-gray-800">Chittagong Hill Tracts</h3>
-                <p class="text-gray-600 mt
-       </section>
-</main>
 
 <footer>
   <div class="bg-gray-800 text-gray-300 py-6">
@@ -112,5 +233,6 @@
       <p>Contact us: info@tourismbangladesh.com | +880 123456789</p>
 </footer>
 <script src="HomePage/navbar.js"></script>
+<script src="Tourism/tourismbd.js"></script>
 </body>
 </html>
