@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tourism Bangladesh</title>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="Assets/TourismBangladesh.png" 
+           alt="Tourism Bangladesh"
+           class="h-10 w-auto object-contain">
+      <span class="text-xl font-bold text-green-600">
+        Tourism Bangladesh
+      </span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+      <li><a href="Home.html" class="hover:text-green-600">Home</a></li>
+      <li><a href="AboutUs.html" class="hover:text-green-600">About Us</a></li>
+      <li><a href="Tourism.html" class="hover:text-green-600">Tourism</a></li>
+      <li><a href="Faq.html" class="hover:text-green-600">FAQ</a></li>
+      <li><a href="Blog.html" class="hover:text-green-600">Blog</a></li>
+      <li>
+        <a href="index.html"
+           class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+          Log Out
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Button -->
+    <button id="menu-btn" class="md:hidden">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+    <ul class="space-y-4 font-medium text-gray-700">
+      <li><a href="Home.html" class="block hover:text-green-600">Home</a></li>
+      <li><a href="AboutUs.html" class="block hover:text-green-600">About Us</a></li>
+      <li><a href="Tourism.html" class="block hover:text-green-600">Tourism</a></li>
+      <li><a href="Faq.html" class="block hover:text-green-600">FAQ</a></li>
+      <li><a href="Blog.html" class="block hover:text-green-600">Blog</a></li>
+      <li>
+        <a href="index.html"
+           class="block text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
+          Log Out
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="text-center mt-12">
+    <h1 class="text-4xl font-bold">
+        Explore Bangladesh
+    </h1>
+    <p class="text-gray-600 mt-4">
+        Discover the beauty and culture of Bangladesh with us.
+    </p>
+</header>
+
+<!-- ================= TOUR CARDS ================= -->
+<main class="max-w-7xl mx-auto px-6 py-16">
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+<!-- CARD TEMPLATE -->
+<script>
+function openModal(title, description){
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalDescription").innerText = description;
+  document.getElementById("detailsModal").showModal();
+}
+</script>
+
+<!-- Bandarban -->
+<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+  <figure>
+    <img class="h-48 w-full object-cover rounded-xl"
+         src="Images/bandarban.png"
+         alt="Bandarban">
+  </figure>
+  <div class="card-body p-5">
+    <h2 class="card-title text-lg">Bandarban</h2>
+    <p class="text-sm">Beautiful hills and waterfalls experience.</p>
+    <div class="card-actions flex justify-between mt-4">
+      <button class="btn btn-sm"
+        onclick="openModal('Bandarban','Bandarban is famous for Nilgiri hills, waterfalls and tribal culture.')">
+        Details
+      </button>
+      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
+        Book Now
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sajek -->
+<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+  <figure>
+    <img class="h-48 w-full object-cover rounded-xl"
+         src="Images/sajek.png"
+         alt="Sajek Valley">
+  </figure>
+  <div class="card-body p-5">
+    <h2 class="card-title text-lg">Sajek Valley</h2>
+    <p class="text-sm">Amazing cloud and sunrise view.</p>
+    <div class="card-actions flex justify-between mt-4">
+      <button class="btn btn-sm"
+        onclick="openModal('Sajek Valley','Sajek offers breathtaking sunrise and cloud views.')">
+        Details
+      </button>
+      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
+        Book Now
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Rangamati -->
+<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+  <figure>
+    <img class="h-48 w-full object-cover rounded-xl"
+         src="Images/rangamati.png"
+         alt="Rangamati">
+  </figure>
+  <div class="card-body p-5">
+    <h2 class="card-title text-lg">Rangamati</h2>
+    <p class="text-sm">Kaptai Lake and natural beauty.</p>
+    <div class="card-actions flex justify-between mt-4">
+      <button class="btn btn-sm"
+        onclick="openModal('Rangamati','Rangamati is famous for Kaptai Lake and tribal heritage.')">
+        Details
+      </button>
+      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
+        Book Now
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Cox's Bazar -->
+<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
+  <figure>
+    <img class="h-48 w-full object-cover rounded-xl"
+         src="Images/coxbazar.jpg"
+         alt="Cox's Bazar">
+  </figure>
+  <div class="card-body p-5">
+    <h2 class="card-title text-lg">Cox's Bazar</h2>
+    <p class="text-sm">World's longest natural sea beach.</p>
+    <div class="card-actions flex justify-between mt-4">
+      <button class="btn btn-sm"
+        onclick="openModal('Cox\'s Bazar','Cox\'s Bazar has the longest sea beach in the world.')">
+        Details
+      </button>
+      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
+        Book Now
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
+</main>
+
+<!-- ================= MODAL ================= -->
+<dialog id="detailsModal" class="modal">
+  <div class="modal-box">
+    <h3 id="modalTitle" class="font-bold text-lg"></h3>
+    <p id="modalDescription" class="py-4"></p>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-800 text-gray-300 py-6 mt-10 text-center">
+  <p>&copy; 2024 Tourism Bangladesh. All rights reserved.</p>
+  <p>Contact: info@tourismbangladesh.com | +880 123456789</p>
+</footer>
+
+<!-- ================= MOBILE NAV SCRIPT ================= -->
+<script>
+document.getElementById("menu-btn").addEventListener("click", function(){
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+</script>
+
+</body>
+</html>

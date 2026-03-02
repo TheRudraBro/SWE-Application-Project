@@ -89,7 +89,7 @@
         <p class="text-sm">Beautiful hills and waterfalls experience.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Bandarban','Bandarban is famous for Nilgiri hills, waterfalls and tribal culture.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -108,7 +108,7 @@
         <p class="text-sm">Amazing cloud and sunrise view.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Sajek Valley','Sajek offers breathtaking sunrise and cloud views.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -127,7 +127,7 @@
         <p class="text-sm">Kaptai Lake and natural beauty.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Rangamati','Rangamati is famous for Kaptai Lake and tribal heritage.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -146,7 +146,7 @@
         <p class="text-sm">Beautiful tea gardens and natural landscapes.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Sylhet','Sylhet is famous for tea gardens and natural beauty.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -165,7 +165,7 @@
         <p class="text-sm">World's longest natural sea beach.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Cox\'s Bazar','Cox\'s Bazar has the longest sea beach in the world.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -184,7 +184,7 @@
         <p class="text-sm">Beautiful island with pristine beaches.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Saint Martin','Saint Martin is famous for its pristine beaches and clear waters.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -203,7 +203,7 @@
         <p class="text-sm">Rich cultural heritage and scenic beauty.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Sunamganj','Sunamganj is known for its rich cultural heritage and scenic beauty.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -222,7 +222,7 @@
         <p class="text-sm">Mangrove forest and home to the Royal Bengal Tiger.</p>
 
         <div class="card-actions flex justify-between items-center mt-4">
-          <button class="btn btn-sm" onclick="modal1.showModal()">Details</button>
+          <button class="btn btn-sm" onclick="openModal('Sundarban','Sundarban is a mangrove forest and home to the Royal Bengal Tiger.')">Details</button>
 
           <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
             Book Now
@@ -235,7 +235,18 @@
 
   </div>
 </main>
-
+<!-- ================= MODAL ================= -->
+<dialog id="detailsModal" class="modal">
+  <div class="modal-box">
+    <h3 id="modalTitle" class="font-bold text-lg"></h3>
+    <p id="modalDescription" class="py-4"></p>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
 
 <footer>
@@ -245,6 +256,6 @@
       <p>Contact us: info@tourismbangladesh.com | +880 123456789</p>
 </footer>
 <script src="HomePage/navbar.js"></script>
-<script src="Tourism/tourismbd.js"></script>
+<script src="Tourism/tourismbddetails.js"></script>
 </body>
 </html>
