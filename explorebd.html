@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>About Us</title>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img 
+        src="Assets/TourismBangladesh.png" 
+        alt="Tourism Bangladesh"
+        class="h-10 w-auto object-contain"
+      >
+      <span class="text-xl font-bold text-green-600">
+        Tourism Bangladesh
+      </span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 font-medium text-gray-700">
+      <li><a href="Home.html" class="hover:text-green-600 transition">Home</a></li>
+      <li><a href="AboutUs.html" class="hover:text-green-600 transition">About Us</a></li>
+      <li><a href="Tourism.html" class="hover:text-green-600 transition">Tourism</a></li>
+      <li><a href="Faq.html" class="hover:text-green-600 transition">FAQ</a></li>
+      <li><a href="Blog.html" class="hover:text-green-600 transition">Blog</a></li>
+      <li>
+        <a href="index.html" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+          Log Out
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+    <ul class="space-y-4 font-medium text-gray-700">
+      <li><a href="Home.html" class="block hover:text-green-600">Home</a></li>
+      <li><a href="AboutUs.html" class="block hover:text-green-600">About Us</a></li>
+      <li><a href="Tourism.html" class="block hover:text-green-600">Tourism</a></li>
+      <li><a href="Faq.html" class="block hover:text-green-600">FAQ</a></li>
+      <li><a href="Blog.html" class="block hover:text-green-600">Blog</a></li>
+      <li>
+        <a href="index.html" class="block text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
+          Log Out
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<header>
+  <div class="bg-[url('./Images/bg.png')] bg-cover bg-center h-64 flex items-center justify-center">
+    <h1 class="text-3xl md:text-5xl font-extrabold text-white text-center">
+      Explore the Beauty of Bangladesh
+    </h1>
+  </div>
+</header>
+<main>
+      <!-- Tours with details modal and book now button -->
+       <section>
+        <div class="max-w-7xl mx-auto px-6 py-12">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+            Explore Bangladesh and Beyond
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Tour Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="Assets/Sundarbans.jpg" alt="Sundarbans" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-gray-800">Sundarbans</h3>
+                <p class="text-gray-600 mt-2">Experience the largest mangrove forest in the world, home to the elusive Bengal tiger.</p>
+                <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition" onclick="openModal('Sundarbans')">View Details</button>
+              </div>
+            </div>
+            <!-- Tour Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="Assets/SaintMartin.jpg" alt="Saint Martin's Island" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-gray-800">Saint Martin's Island</h3>
+                <p class="text-gray-600 mt-2">Discover the serene beauty of Bangladesh's only coral island, perfect for beach lovers.</p>
+                <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition" onclick="openModal('Saint Martin')">View Details</button>
+              </div>
+            </div>
+            <!-- Tour Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="Assets/Chittagong.jpg" alt="Chittagong Hill Tracts" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h3 class="text-xl font-semibold text-gray-800">Chittagong Hill Tracts</h3>
+                <p class="text-gray-600 mt
+       </section>
+</main>
+
+<footer>
+  <div class="bg-gray-800 text-gray-300 py-6">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p>&copy; 2024 Tourism Bangladesh. All rights reserved.</p>
+      <p>Contact us: info@tourismbangladesh.com | +880 123456789</p>
+</footer>
+<script src="HomePage/navbar.js"></script>
+</body>
+</html>
