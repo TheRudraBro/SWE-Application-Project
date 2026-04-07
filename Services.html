@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+       <script src="https://unpkg.com/lucide@latest"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Home</title>
 </head>
@@ -67,6 +68,96 @@
     </ul>
   </div>
 </nav>
+
+<header>
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800">
+        Our <span class="text-green-500">Services</span>
+      </h2>
+        <p class="text-gray-600 mt-4">
+            Explore our wide range of travel services designed to make your trip unforgettable.
+        </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- Package Tour -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+        <div class="bg-orange-100 p-4 rounded-full inline-block">
+          <i data-lucide="palmtree" class="w-10 h-10 text-orange-500"></i>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold">Package Tour</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          We have ready made budget friendly <br> economy tour packages and <br> student friendly packages.
+        </p>
+      </div>
+
+      <!-- Customized Tour -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+        <div class="bg-green-100 p-4 rounded-full inline-block">
+          <i data-lucide="luggage" class="w-10 h-10 text-green-600"></i>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold">Customized Tour</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          We have the facility of customizing <br> any tour package completely <br> according to your needs
+        </p>
+      </div>
+
+      <!-- Corporate Tour -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+        <div class="bg-purple-100 p-4 rounded-full inline-block">
+          <i data-lucide="users" class="w-10 h-10 text-purple-600"></i>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold">Corporate Tour</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          We organize corporate tours for any <br> organization including offices, schools, <br> colleges, universities.
+        </p>
+      </div>
+
+      <!-- Hotel Resort Booking -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+        <div class="bg-indigo-100 p-4 rounded-full inline-block">
+          <i data-lucide="hotel" class="w-10 h-10 text-indigo-600"></i>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold">Hotel Resort Booking</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          We provide hotel resort booking services in <br> all tourist destinations of the country including  Dhaka, Cox’s Bazar, Sylhet, Rangamati, Bandarban, Sajek.
+        </p>
+      </div>
+
+      <!-- Bus Ticket -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+        <div class="bg-yellow-100 p-4 rounded-full inline-block">
+          <i data-lucide="bus" class="w-10 h-10 text-yellow-600"></i>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold">Bus Ticket</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          We provide all types of bus ticket booking services including Non AC Chair Coach, AC Business Class, Sleeper Coach etc.  in various parts of the country.
+        </p>
+      </div>
+
+      <!-- Travel Inquiries -->
+      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition">
+        <div class="bg-red-100 p-4 rounded-full inline-block">
+          <i data-lucide="headphones" class="w-10 h-10 text-red-600"></i>
+        </div>
+        <h3 class="mt-4 text-lg font-semibold">Travel Inquiries</h3>
+        <p class="text-gray-600 text-sm mt-2">
+          We have a dedicated customer care team to answer any of your travel related queries. 24/7 You will get the desired solution as soon as possible after asking
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</header>
+
 <footer class="bg-gradient-to-br from-gray-900 to-black text-gray-300">
   <div class="max-w-7xl mx-auto px-6 py-12">
 
@@ -148,5 +239,9 @@
 
   </div>
 </footer>
+<!-- Activate Icons -->
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
