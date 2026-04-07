@@ -66,7 +66,7 @@
 <!-- ================= HEADER ================= -->
 <header class="text-center mt-12">
     <h1 class="text-4xl font-bold">
-        Explore Bangladesh
+        <span class="text-green-600">Explore Bangladesh</span> with Regular Packages
     </h1>
     <p class="text-gray-600 mt-4">
         Discover the beauty and culture of Bangladesh with us.
@@ -74,122 +74,310 @@
 </header>
 
 <!-- ================= TOUR CARDS ================= -->
-<main class="max-w-7xl mx-auto px-6 py-16">
+ <main>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    <!-- Card 1 -->
+    <div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/bandarban.png" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Bandarban</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">3999 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Bandarban',
+              'Bandarban is famous for Nilgiri hills, waterfalls and tribal culture.',
+              '3999 BDT',
+              '3 Nights / 2 Days',
+              'Nilgiri Hills, Waterfalls, Tribal Culture',
+              'Scenic Hills, Natural Waterfalls, Rich Tribal Heritage'
 
-<!-- CARD TEMPLATE -->
-<script>
-function openModal(title, description){
-  document.getElementById("modalTitle").innerText = title;
-  document.getElementById("modalDescription").innerText = description;
-  document.getElementById("detailsModal").showModal();
-}
-</script>
-
-<!-- Bandarban -->
-<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
-  <figure>
-    <img class="h-48 w-full object-cover rounded-xl"
-         src="Images/bandarban.png"
-         alt="Bandarban">
-  </figure>
-  <div class="card-body p-5">
-    <h2 class="card-title text-lg">Bandarban</h2>
-    <p class="text-sm">Beautiful hills and waterfalls experience.</p>
-    <div class="card-actions flex justify-between mt-4">
-      <button class="btn btn-sm"
-        onclick="openModal('Bandarban','Bandarban is famous for Nilgiri hills, waterfalls and tribal culture.')">
-        Details
-      </button>
-      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
-        Book Now
-      </button>
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Sajek -->
-<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
-  <figure>
-    <img class="h-48 w-full object-cover rounded-xl"
-         src="Images/sajek.png"
-         alt="Sajek Valley">
-  </figure>
-  <div class="card-body p-5">
-    <h2 class="card-title text-lg">Sajek Valley</h2>
-    <p class="text-sm">Amazing cloud and sunrise view.</p>
-    <div class="card-actions flex justify-between mt-4">
-      <button class="btn btn-sm"
-        onclick="openModal('Sajek Valley','Sajek offers breathtaking sunrise and cloud views.')">
-        Details
-      </button>
-      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
-        Book Now
-      </button>
+    <!-- Card 2 -->
+    <div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/sajek.png" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Sajek</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">4999 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Sajek',
+              'Sajek is a hill station and a popular tourist destination in Bangladesh.',
+              '৳3999',
+              '3 Nights / 2 Days',
+              'Sajek Valley, Hill Stations',
+              'Pristine Valleys, Scenic Hill Stations'
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Rangamati -->
-<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
-  <figure>
-    <img class="h-48 w-full object-cover rounded-xl"
-         src="Images/rangamati.png"
-         alt="Rangamati">
-  </figure>
-  <div class="card-body p-5">
-    <h2 class="card-title text-lg">Rangamati</h2>
-    <p class="text-sm">Kaptai Lake and natural beauty.</p>
-    <div class="card-actions flex justify-between mt-4">
-      <button class="btn btn-sm"
-        onclick="openModal('Rangamati','Rangamati is famous for Kaptai Lake and tribal heritage.')">
-        Details
-      </button>
-      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
-        Book Now
-      </button>
+    <!-- Card 3 -->
+    <div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/rangamati.png" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Rangamati</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">3999 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Rangamati',
+              'Rangamati is a district in the Chittagong Hill Tracts region of Bangladesh.',
+              '3999 BDT',
+              '3 Nights / 2 Days',
+              'Rangamati Lake, Hill Stations',
+              'Beautiful Lake, Scenic Hill Stations'
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Cox's Bazar -->
-<div class="card bg-base-100 shadow-xl max-w-xs mx-auto">
-  <figure>
-    <img class="h-48 w-full object-cover rounded-xl"
-         src="Images/coxbazar.jpg"
-         alt="Cox's Bazar">
-  </figure>
-  <div class="card-body p-5">
-    <h2 class="card-title text-lg">Cox's Bazar</h2>
-    <p class="text-sm">World's longest natural sea beach.</p>
-    <div class="card-actions flex justify-between mt-4">
-      <button class="btn btn-sm"
-        onclick="openModal('Cox\'s Bazar','Cox\'s Bazar has the longest sea beach in the world.')">
-        Details
-      </button>
-      <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700">
-        Book Now
-      </button>
+    <!-- Card 4 (example placeholder, duplicate as needed) -->
+    <div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/sylhet.png" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Sylhet</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">3999 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Sylhet',
+              'Sylhet is famous for tea gardens and scenic landscapes.',
+              '3999 BDT',
+              '3 Nights / 2 Days',
+              'Tea Gardens, Scenic Landscapes',
+              'Famous Tea Plantations, Beautiful Views'
+
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-</div>
-</main>
+    <!-- card 5 -->
+<div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/coxbazar.jpg" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Cox's Bazar</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">4900 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Coxs Bazar',
+              'Coxs Bazar is famous for its long coastline and beautiful beaches.',
+              '4900 BDT',
+              '3 Nights / 2 Days',
+              'Coxs Bazar Beach, Long Coastline',
+              'Beautiful Beaches, Scenic Landscapes'
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- card 6 -->
+     <div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/saintmartin.png" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Saint Martin</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">7900 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Saint Martin',
+              'Saint Martin is known for its pristine beaches and crystal-clear waters.',
+              '7900 BDT',
+              '3 Nights / 2 Days',
+              'Paradise Beach, Crystal Clear Waters',
+              'Pristine Beaches, Crystal Clear Waters'
+
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- card 7 -->
+
+    <div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/sunamganj.png" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Sunamganj</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">6999 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Sunamganj',
+              'Sunamganj is known for its rich cultural heritage and natural beauty.',
+              '6999 BDT',
+              '3 Nights / 2 Days',
+              'Sunamganj Bazar, Cultural Heritage',
+              'Rich Cultural Heritage, Natural Beauty'
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- card 8 -->
+     <div class="card bg-base-100 shadow-xl flex flex-col">
+      <figure class="h-48 overflow-hidden">
+        <img class="w-full h-full object-cover rounded-t-xl" src="Images/kuakata.png" />
+      </figure>
+      <div class="card-body p-5 flex flex-col justify-between flex-1">
+        <h2 class="card-title text-lg">Kuakata</h2>
+        <div class="text-sm text-gray-600 space-y-1">
+          <p>💰 Price: <span class="text-green-600 font-semibold">3999 BDT</span></p>
+          <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+        </div>
+        <div class="card-actions flex justify-between items-center mt-4">
+          <button class="btn btn-sm"
+            onclick="openModal(
+              'Kuakata',
+              'Kuakata is known for its beautiful beaches and sunset views.',
+              '3999 BDT',
+              '3 Nights / 2 Days',
+              'Kuakata Beach, Sunset Views',
+              'Beautiful Beaches, Stunning Sunset'
+
+            )">
+            Details
+          </button>
+          <button class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-green-700 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- if family or couple or group tour then show this section otherwise hide this section -->
+
+
+ </main>
+<section class="text-center bg-white py-16">
+  <h1 class="text-2xl sm:text-4xl md:text-3xl font-bold leading-snug sm:leading-tight md:leading-tight text-gray-900">
+    If You Are Want To Travel With Your <br>
+    <span class="text-green-600">Family, Couple, or Friends</span> <br>
+    Then Contact With Us
+  </h1>
+
+  <p class="text-gray-600 mt-6 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+    Discover the beauty, culture, and hidden gems of Bangladesh with our specially curated travel packages.
+  </p>
+
+  <!-- Call to Action -->
+  <div class="mt-8">
+    <a href="#contact" class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-green-700 transition-all shadow-lg hover:shadow-xl">
+      Contact Us Now
+    </a>
+  </div>
+</section>
 
 <!-- ================= MODAL ================= -->
+
 <dialog id="detailsModal" class="modal">
   <div class="modal-box">
-    <h3 id="modalTitle" class="font-bold text-lg"></h3>
-    <p id="modalDescription" class="py-4"></p>
+    
+    <h3 id="modalTitle" class="font-bold text-lg mb-2"></h3>
+
+    <p id="modalDescription" class="py-2 text-gray-600"></p>
+
+    <!-- Price & Duration inside modal -->
+    <div class="mt-4 text-sm space-y-1">
+      <p>💰 Price : <span id="modalPrice" class="text-green-600 font-semibold"></span></p>
+      <p>⏳ Duration : <span id="modalDuration" class="font-medium"></span></p>
+      <p>📍 Spot Exploration : <span id="modalSpot" class="font-medium"></span></p>
+      <p>⚡ Highlights : <span id="modalHighlights" class="font-medium"></span></p>
+    </div>
+
     <div class="modal-action">
       <form method="dialog">
         <button class="btn">Close</button>
       </form>
     </div>
+
   </div>
 </dialog>
+
+
+
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-gray-800 text-gray-300 py-6 mt-10 text-center">
@@ -199,9 +387,16 @@ function openModal(title, description){
 
 <!-- ================= MOBILE NAV SCRIPT ================= -->
 <script>
-document.getElementById("menu-btn").addEventListener("click", function(){
-  document.getElementById("mobile-menu").classList.toggle("hidden");
-});
+  function openModal(title, description, price, duration, spot, highlights) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+    document.getElementById("modalPrice").innerText = price;
+    document.getElementById("modalDuration").innerText = duration;
+    document.getElementById("modalSpot").innerText = spot;
+    document.getElementById("modalHighlights").innerText = highlights;
+
+    document.getElementById("detailsModal").showModal();
+  }
 </script>
 
 </body>
