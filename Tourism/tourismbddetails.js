@@ -23,9 +23,9 @@
     };
 
     // Save booking to localStorage (temporary)
-    let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
-    bookings.push(bookingData);
-    localStorage.setItem('bookings', JSON.stringify(bookings));
+    // let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+    // bookings.push(bookingData);
+    // localStorage.setItem('bookings', JSON.stringify(bookings));
 
     alert("✅ Booking submitted! Please wait until we verify your payment.");
     closeBookingModal();
