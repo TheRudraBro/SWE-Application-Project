@@ -18,18 +18,21 @@
         guests: document.getElementById('guests').value,
         package: document.getElementById('bookingPackageName').innerText,
         details: document.getElementById('bookingPackageDetails').innerText,
-        trxId: document.getElementById('transactionId').value, // bKash TRX ID
-        paymentStatus: "Pending" // mark as pending until you verify manually
+        trxId: document.getElementById('transactionId').value,
+        paymentStatus: "Pending"
     };
 
-    // Save booking to localStorage (temporary)
-    // let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
-    // bookings.push(bookingData);
-    // localStorage.setItem('bookings', JSON.stringify(bookings));
-
-    alert("✅ Booking submitted! Please wait until we verify your payment.");
-    closeBookingModal();
-    this.reset();
+    // 🔥 Firebase এ save
+    push(ref(db, 'bookings'), bookingData)
+        .then(() => {
+            alert("✅ Booking submitted! Waiting for verification.");
+            closeBookingModal();
+            document.getElementById('bookingForm').reset();
+        })
+        .catch((error) => {
+            console.error(error);
+            alert("❌ Error saving booking!");
+        });
 });
 // Function to open booking modal and fill package info
 function openBookingModal(packageName, packageDetails) {

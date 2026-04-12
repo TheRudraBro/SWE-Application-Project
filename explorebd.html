@@ -514,15 +514,11 @@
   </div>
 </footer>
 <!-- Firebase -->
- <script type="module">
-  // Import the functions you need from the SDKs you need
+<script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-database.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyCriaPq2KbtuPZtMtuHQhLH7zWUTjwMOfQ",
     authDomain: "tourism-bangladesh-official.firebaseapp.com",
@@ -534,9 +530,58 @@
     measurementId: "G-5FYLYPQ8B6"
   };
 
-  // Initialize Firebase
+  // ✅ सही order
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  // ✅ Modal functions
+  window.openModal = function(title, description, price, duration, spot, highlights) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+    document.getElementById("modalPrice").innerText = price;
+    document.getElementById("modalDuration").innerText = duration;
+    document.getElementById("modalSpot").innerText = spot;
+    document.getElementById("modalHighlights").innerText = highlights;
+    document.getElementById("detailsModal").showModal();
+  }
+
+  window.openBookingModal = function(packageName, packageDetails) {
+    document.getElementById('bookingPackageName').innerText = packageName;
+    document.getElementById('bookingPackageDetails').innerText = packageDetails;
+    document.getElementById('bookingModal').showModal();
+  }
+
+  window.closeBookingModal = function() {
+    document.getElementById('bookingModal').close();
+  }
+
+  // ✅ Booking submit
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const bookingData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      guests: document.getElementById('guests').value,
+      package: document.getElementById('bookingPackageName').innerText,
+      details: document.getElementById('bookingPackageDetails').innerText,
+      trxId: document.getElementById('transactionId').value,
+      paymentStatus: "Pending"
+    };
+
+    push(ref(db, 'bookings'), bookingData)
+      .then(() => {
+        alert("✅ Booking submitted!");
+        closeBookingModal();
+        document.getElementById('bookingForm').reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("❌ Error saving booking");
+      });
+  });
 </script>
 <script src="HomePage/navbar.js"></script>
 <script src="Tourism/tourismbddetails.js"></script>
