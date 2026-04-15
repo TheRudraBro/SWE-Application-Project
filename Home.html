@@ -36,9 +36,10 @@
       <li><a href="Blog.html" class="hover:text-green-600 transition">Blog</a></li>
       <li><a href="Gallery.html" class="hover:text-green-600 transition">Gallery</a></li>
       <li>
-        <a href="index.html" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-          Log Out
-        </a>
+        <a href="#" onclick="logoutUser()" 
+   class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+  Log Out
+</a>
       </li>
     </ul>
 
@@ -63,7 +64,7 @@
       <li><a href="Blog.html" class="block hover:text-green-600">Blog</a></li>
       <li><a href="Gallery.html" class="block hover:text-green-600">Gallery</a></li>
       <li>
-        <a href="index.html" class="block text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
+        <a href="#" onclick="logoutUser()" class="block text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
           Log Out
         </a>
       </li>
@@ -332,8 +333,45 @@
 
   </div>
 </footer>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } 
+from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
 
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyCriaPq2KbtuPZtMtuHQhLH7zWUTjwMOfQ",
+  authDomain: "tourism-bangladesh-official.firebaseapp.com",
+  projectId: "tourism-bangladesh-official",
+  appId: "1:900176892229:web:dbf383a38895f9337eee2c"
+};
 
+// Init
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// 🔐 Protect page (login check)
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    window.location.href = "index.html";
+  }
+});
+
+// 🔓 Logout function
+window.logoutUser = function () {
+  signOut(auth).then(() => {
+    window.location.href = "index.html";
+  });
+};
+</script>
+
+<!-- Prevent back button -->
+<script>
+window.history.pushState(null, null, window.location.href);
+window.onpopstate = function () {
+  window.history.pushState(null, null, window.location.href);
+};
+</script>
 
 <script src="HomePage/header.js"></script>
 <script src="HomePage/navbar.js"></script>
