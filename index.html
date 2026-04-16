@@ -109,14 +109,14 @@ document.getElementById("loginButton").addEventListener("click", function (e) {
       const user = userCredential.user;
 
       if (user.emailVerified) {
-        alert("✅ Login Successful!");
+        // alert("✅ Login Successful!");
         window.location.href = "Home.html";
       } else {
-        alert("❌ Please verify your email first!");
+        alert("Please check your email and verify it first!");
       }
     })
     .catch(() => {
-      alert("❌ Invalid email or password");
+      alert("Invalid email or password");
     });
 });
 </script>
