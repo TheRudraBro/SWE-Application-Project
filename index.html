@@ -77,11 +77,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/fireba
 import { getAuth, signInWithEmailAndPassword } 
 from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCriaPq2KbtuPZtMtuHQhLH7zWUTjwMOfQ",
   authDomain: "tourism-bangladesh-official.firebaseapp.com",
+  databaseURL: "https://tourism-bangladesh-official-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "tourism-bangladesh-official",
-  appId: "1:900176892229:web:dbf383a38895f9337eee2c"
+  storageBucket: "tourism-bangladesh-official.firebasestorage.app",
+  messagingSenderId: "900176892229",
+  appId: "1:900176892229:web:dbf383a38895f9337eee2c",
+  measurementId: "G-5FYLYPQ8B6"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -100,12 +105,18 @@ document.getElementById("loginButton").addEventListener("click", function (e) {
   }
 
   signInWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      alert("✅ Login Successful!");
-      window.location.href = "./Home.html";
+    .then((userCredential) => {
+      const user = userCredential.user;
+
+      if (user.emailVerified) {
+        alert("✅ Login Successful!");
+        window.location.href = "Home.html";
+      } else {
+        alert("❌ Please verify your email first!");
+      }
     })
-    .catch((error) => {
-      alert("❌ " + "Please check your email and password and try again.");
+    .catch(() => {
+      alert("❌ Invalid email or password");
     });
 });
 </script>
