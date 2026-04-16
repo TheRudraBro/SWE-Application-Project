@@ -36,9 +36,10 @@
       <li><a href="Blog.html" class="hover:text-green-600 transition">Blog</a></li>
       <li><a href="Gallery.html" class="hover:text-green-600 transition">Gallery</a></li>
       <li>
-        <a href="index.html" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-          Log Out
-        </a>
+        <a href="#" onclick="logoutUser()" 
+   class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+  Log Out
+</a>
       </li>
     </ul>
 
@@ -64,9 +65,10 @@
       <li><a href="Gallery.html" class="block hover:text-green-600">Gallery</a></li>
 
       <li>
-        <a href="index.html" class="block text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
-          Log Out
-        </a>
+        <a href="#" onclick="logoutUser()" 
+   class="block text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
+  Log Out
+</a>
       </li>
     </ul>
   </div>
@@ -265,6 +267,7 @@
   </div>
 </footer>
 <script src="HomePage/navbar.js"></script>
-<script src="LoginPage/logout.js"></script>
+<!-- <script src="LoginPage/logout.js"></script> -->
+<script type="module" src="auth.js"></script>
 </body>
 </html>
