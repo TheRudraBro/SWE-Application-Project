@@ -98,6 +98,7 @@
         <div class="text-sm text-gray-600 space-y-1">
           <p>💰 Price: <span class="text-green-600 font-semibold">3999 BDT</span></p>
           <p>⏳ Duration: <span class="font-medium">3 Nights / 2 Days</span></p>
+          <!-- <p>💺 Seat Availability: <span class="font-medium text-green-600">17</span></p> -->
         </div>
         <div class="card-actions flex justify-between items-center mt-4">
           <button class="btn btn-sm"
@@ -382,6 +383,7 @@
       <p>⏳ Duration : <span id="modalDuration" class="font-medium"></span></p>
       <p>📍 Spot Exploration : <span id="modalSpot" class="font-medium"></span></p>
       <p>⚡ Highlights : <span id="modalHighlights" class="font-medium"></span></p>
+      <p>💺 Seat Availability : <span id="modalSeat" class="font-medium"></span></p>
     </div>
 
     <div class="modal-action">
@@ -520,6 +522,20 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
   import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-database.js";
+  import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
+
+const auth = getAuth();
+
+window.logoutUser = function () {
+  signOut(auth)
+    .then(() => {
+      alert("Logged out!");
+      window.location.href = "index.html";
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+};
 
   const firebaseConfig = {
     apiKey: "AIzaSyCriaPq2KbtuPZtMtuHQhLH7zWUTjwMOfQ",
@@ -583,12 +599,13 @@
         console.error(error);
         alert("❌ Error saving booking");
       });
+      
   });
 </script>
 <script src="HomePage/navbar.js"></script>
 <script src="Tourism/tourismbddetails.js"></script>
-<!-- <script src="LoginPage/logout.js"></script> -->
- <script type="module" src="auth.js"></script>
+<script src="LoginPage/logout.js"></script>
+<script type="module" src="auth.js"></script>
 
 
 
